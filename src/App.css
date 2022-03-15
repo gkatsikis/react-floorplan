@@ -1,16 +1,41 @@
+.floor-plan {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 2fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Bedroom-1 Bedroom-1 Bedroom-1 Living-Room Living-Room Living-Room Kitchen Kitchen"
+    "Bedroom-1 Bedroom-1 Bedroom-1 Living-Room Living-Room Living-Room Kitchen Kitchen"
+    "Full-Bath Full-Bath Full-Bath Living-Room Living-Room Living-Room Kitchen Kitchen"
+    "Bedroom-2 Bedroom-2 Bedroom-2 Half-Bath Half-Bath Bedroom-3 Bedroom-3 Bedroom-3"
+}
+
 div {
   border: 1px solid grey;
-  margin: 5px;
   padding: 5px;
   border: none;
+  color: white;
 }
 
 .bedroom {
   background-color: #2B7188;
 }
 
+#bedroom-1 {
+  grid-area: Bedroom-1; 
+}
+
+#bedroom-2 {
+  grid-area: Bedroom-2;
+}
+
+#bedroom-3 {
+  grid-area: Bedroom-3; 
+}
+
 .living-room {
   background-color: #C9AB82;
+  grid-area: Living-Room;
 }
 
 .kitchen {
@@ -21,11 +46,21 @@ div {
   background-color: #728831;
 }
 
+#Fullbath {
+  grid-area: Full-Bath;
+}
+
+#Halfbath {
+  grid-area: Half-Bath;
+}
+
 .oven {
   background-color: #C94716;
+  grid-area: Oven; 
 }
 
 .sink {
   background-color: #935613;
+  grid-area: Sink;
 }
 
